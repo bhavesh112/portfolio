@@ -51,7 +51,10 @@ const Experience = () => {
           )}
         </AbsoluteWrapper>
         {data.experience.map((item, index) => (
-          <ExperienceWrapper even={(index + 1) % 2 === 0}>
+          <ExperienceWrapper
+            data-aos={(index + 1) % 2 === 0 ? "fade-up-left" : "fade-up-right"}
+            even={(index + 1) % 2 === 0}
+          >
             <ExperienceCard item={item} />
           </ExperienceWrapper>
         ))}

@@ -12,12 +12,18 @@ const About = () => {
             <Content>{data.aboutMe}</Content>
             <SkillsHeader>Technologies and Libraries that i use :</SkillsHeader>
             <SkillsList>
-              {data.skills.map((item) => (
-                <Skill>{item}</Skill>
+              {data.skills.map((item, index) => (
+                <Skill
+                  data-aos='fade-up'
+                  data-aos-delay={50 * index}
+                  data-aos-anchor-placement='top-bottom'
+                >
+                  {item}
+                </Skill>
               ))}
             </SkillsList>
           </ContentWrapper>
-          <ImageWrapper>
+          <ImageWrapper data-aos='zoom-in-left' data-aos-duration='1000'>
             <Img src={headshot} alt='headshot' />
           </ImageWrapper>
         </MainWrapper>

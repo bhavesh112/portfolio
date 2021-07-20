@@ -7,19 +7,22 @@ import About from "./components/About/About";
 import Experience from "./components/Experience/Experience";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { data } from "./config";
+import Projects from "./components/Projects/Projects";
+import Contact from "./components/Contact/Contact";
 function App() {
   React.useEffect(() => {
-    AOS.init({
-      duration: 2000,
-    });
+    AOS.init({ duration: 1000, anchorPlacement: "top-bottom" });
   }, []);
   return (
     <>
       <Container>
         <Header />
         <Hero />
-        <About />
-        <Experience />
+        {data.nav.about && <About />}
+        {data.nav.experience && <Experience />}
+        {data.nav.project && <Projects />}
+        {data.nav.contact && <Contact />}
       </Container>
     </>
   );

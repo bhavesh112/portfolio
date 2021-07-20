@@ -5,11 +5,23 @@ const Hero = () => {
   return (
     <>
       <SectionWrapper id='home'>
-        <Intro>Hi, My Name is</Intro>
-        <Name>{data.fullName}.</Name>
-        <Title>{data.profession}</Title>
-        <AboutMe>{data.introduction}</AboutMe>
-        <ContactButton href={"#contact"}>Get in Touch</ContactButton>
+        <Intro data-aos='fade-up'>Hi, My Name is</Intro>
+        <Name data-aos='fade-up' data-aos-delay='100'>
+          {data.fullName}.
+        </Name>
+        <Title data-aos='fade-up' data-aos-delay='200'>
+          {data.profession}
+        </Title>
+        <AboutMe data-aos='fade-up' data-aos-delay='300'>
+          {data.introduction}
+        </AboutMe>
+        <ContactButton
+          data-aos='fade-up'
+          data-aos-delay='400'
+          href={"#contact"}
+        >
+          Get in Touch
+        </ContactButton>
       </SectionWrapper>
     </>
   );
@@ -41,15 +53,7 @@ const SectionWrapper = styled.section`
   justify-content: center;
   padding: 0 150px;
 `;
-const fadeUp = keyframes`
-from{ transform:translateY(20px);
-opacity:0;}
 
-to{
-    transform:translateY(0px);
-opacity:1;
-}
-`;
 const AboutMe = styled.p`
   max-width: 600px;
   margin-top: 20px;
@@ -59,16 +63,13 @@ const Title = styled.h3`
   color: #fff;
   font-size: clamp(30px, 8vw, 70px);
   font-style: italic;
-  animation: ${fadeUp} 0.5s linear;
+
   line-height: 0.9;
-  animation-delay: 300ms;
 `;
 const Name = styled.h2`
   font-size: clamp(40px, 8vw, 80px);
   color: #b3b3b3;
   line-height: 1.1;
-  animation: ${fadeUp} 0.5s linear;
-  animation-delay: 200ms;
 `;
 const Intro = styled.h1`
   color: #fff;
@@ -76,7 +77,6 @@ const Intro = styled.h1`
   font-size: clamp(14px, 5vw, 16px);
   color: #02d463;
   font-weight: 400;
-  animation: ${fadeUp} 0.5s linear;
-  animation-delay: 100ms;
+
   margin-bottom: 20px;
 `;
