@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.cffdfedb.chunk.css",
-    "main.js": "/Portfolio/static/js/main.7cddefbd.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.7cddefbd.chunk.js.map",
-    "runtime-main.js": "/Portfolio/static/js/runtime-main.c5ffd035.js",
-    "runtime-main.js.map": "/Portfolio/static/js/runtime-main.c5ffd035.js.map",
-    "static/css/2.7fc9bc2b.chunk.css": "/Portfolio/static/css/2.7fc9bc2b.chunk.css",
-    "static/js/2.131d65f2.chunk.js": "/Portfolio/static/js/2.131d65f2.chunk.js",
-    "static/js/2.131d65f2.chunk.js.map": "/Portfolio/static/js/2.131d65f2.chunk.js.map",
-    "index.html": "/Portfolio/index.html",
-    "static/css/2.7fc9bc2b.chunk.css.map": "/Portfolio/static/css/2.7fc9bc2b.chunk.css.map",
-    "static/css/main.cffdfedb.chunk.css.map": "/Portfolio/static/css/main.cffdfedb.chunk.css.map",
-    "static/js/2.131d65f2.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.131d65f2.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/Portfolio/static/media/SFMono-SemiboldItalic.9a0ae638.woff2",
-    "static/media/headshot.25c0d947.png": "/Portfolio/static/media/headshot.25c0d947.png",
-    "static/media/resume.1537996f.pdf": "/Portfolio/static/media/resume.1537996f.pdf"
+    "main.css": "/portfolio/static/css/main.6cb2e028.chunk.css",
+    "main.js": "/portfolio/static/js/main.7cddefbd.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.7cddefbd.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.f2758266.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.f2758266.js.map",
+    "static/css/2.7fc9bc2b.chunk.css": "/portfolio/static/css/2.7fc9bc2b.chunk.css",
+    "static/js/2.753b56e2.chunk.js": "/portfolio/static/js/2.753b56e2.chunk.js",
+    "static/js/2.753b56e2.chunk.js.map": "/portfolio/static/js/2.753b56e2.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "static/css/2.7fc9bc2b.chunk.css.map": "/portfolio/static/css/2.7fc9bc2b.chunk.css.map",
+    "static/css/main.6cb2e028.chunk.css.map": "/portfolio/static/css/main.6cb2e028.chunk.css.map",
+    "static/js/2.753b56e2.chunk.js.LICENSE.txt": "/portfolio/static/js/2.753b56e2.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/portfolio/static/media/SFMono-SemiboldItalic.9a0ae638.woff2",
+    "static/media/headshot.25c0d947.png": "/portfolio/static/media/headshot.25c0d947.png",
+    "static/media/resume.1537996f.pdf": "/portfolio/static/media/resume.1537996f.pdf"
   },
   "entrypoints": [
-    "static/js/runtime-main.c5ffd035.js",
+    "static/js/runtime-main.f2758266.js",
     "static/css/2.7fc9bc2b.chunk.css",
-    "static/js/2.131d65f2.chunk.js",
-    "static/css/main.cffdfedb.chunk.css",
+    "static/js/2.753b56e2.chunk.js",
+    "static/css/main.6cb2e028.chunk.css",
     "static/js/main.7cddefbd.chunk.js"
   ]
 }
