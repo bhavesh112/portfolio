@@ -23,6 +23,11 @@ const Section = styled.section`
     padding: 80px 40px;
   }
 `;
+const MainWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 const Heading = styled.h3`
   font-size: clamp(32px, 5vw, 50px);
   line-height: clamp(32px, 5vw, 50px);
