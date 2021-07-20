@@ -30,18 +30,15 @@ const Header = () => {
           {data.name}
         </MyName>
         <NavList>
-          <NavLink>
-            <a href='#home'>About</a>
-          </NavLink>
-          <NavLink>
-            <a href='#experience'>Experience</a>
-          </NavLink>
-          <NavLink>
-            <a href='#project'>Project</a>
-          </NavLink>
-          <NavLink>
-            <a href='#contact'>Contact</a>
-          </NavLink>
+          {Object.keys(data.nav)
+            .filter((item) => data.nav[item] === true)
+            .map((item) => (
+              <>
+                <NavLink>
+                  <a href={"#" + item}>{item}</a>
+                </NavLink>
+              </>
+            ))}
           <NavLink>
             <a href={pdf} download={`${data.name + "_Resume.pdf"}`}>
               Resume
@@ -61,6 +58,7 @@ const NavList = styled.ul`
 const NavLink = styled.li`
   display: inline-block;
   color: #fff;
+  text-transform: capitalize;
   & a {
     color: #fff;
     &:link,

@@ -8,7 +8,7 @@ const Hero = () => {
         <Intro>Hi, My Name is</Intro>
         <Name>{data.fullName}.</Name>
         <Title>{data.profession}</Title>
-        <AboutMe>{data.aboutMe}</AboutMe>
+        <AboutMe>{data.introduction}</AboutMe>
         <ContactButton href={"#contact"}>Get in Touch</ContactButton>
       </SectionWrapper>
     </>
