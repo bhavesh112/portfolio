@@ -16,7 +16,7 @@ const Footer = () => {
               </Icon>
             );
           return (
-            <Icon target='_blank' href={data.social.item}>
+            <Icon target='_blank' href={data.social[item]}>
               <i className={`fab fa-${item}`}></i>
             </Icon>
           );

@@ -8,10 +8,18 @@
 } /*!sc*/
 @font-face {
   font-family: "Calibre";
+  src: url(./assets/fonts/Calibre/Calibre-Light.woff2) format("woff2"),
+    url(./assets/fonts/Calibre/Calibre-Light.woff) format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Calibre";
   src: url(./assets/fonts/Calibre/Calibre-LightItalic.woff2) format("woff2"),
     url(./assets/fonts/Calibre/Calibre-LightItalic.woff) format("woff");
   font-weight: 200;
-  font-style: normal;
+  font-style: italic;
   font-display: auto;
 } /*!sc*/
 @font-face {
@@ -94,4 +102,5 @@ body {
   font-family: "Calibre", -apple-system, system-ui, sans-serif;
   font-size: 20px;
   line-height: 1.3;
+  position: relative;
 }
