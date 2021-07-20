@@ -2,22 +2,23 @@ import React from "react";
 import styled from "styled-components";
 import { data } from "./../../config";
 import pdf from "./../../assets/resume.pdf";
+
 const Header = () => {
   const [scroll, setScroll] = React.useState(false);
   const [prevScroll, setPrevScroll] = React.useState(0);
 
-  const handleNav = () => {
-    let st = window.scrollY;
-    if (!st) {
-      setScroll(false);
-    } else if (st > prevScroll) {
-      setScroll("down");
-    } else {
-      setScroll("up");
-    }
-    setPrevScroll(st);
-  };
   React.useEffect(() => {
+    const handleNav = () => {
+      let st = window.scrollY;
+      if (!st) {
+        setScroll(false);
+      } else if (st > prevScroll) {
+        setScroll("down");
+      } else {
+        setScroll("up");
+      }
+      setPrevScroll(st);
+    };
     window.addEventListener("scroll", (e) => handleNav(e));
     return () => {
       window.removeEventListener("scroll", (e) => handleNav(e));
@@ -68,6 +69,9 @@ const NavLink = styled.li`
   }
   &:not(:last-child) {
     margin-right: 20px;
+    @media (max-width: 768px) {
+      display: none;
+    }
     & a {
       &:active {
         outline: 2px dashed #02d463;
@@ -85,6 +89,9 @@ const NavLink = styled.li`
         background-color: #02d463;
         color: #fff;
       }
+      @media (max-width: 767px) {
+        font-size: 16px;
+      }
     }
   }
 `;
@@ -101,6 +108,9 @@ const MyName = styled.a`
   font-family: "Satisfy", cursive;
   font-size: 28px;
   display: flex;
+  @media (max-width: 767px) {
+    font-size: 24px;
+  }
 `;
 const Wrapper = styled.header`
   display: flex;
@@ -118,6 +128,11 @@ const Wrapper = styled.header`
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
+  @media (max-width: 767px) {
+    padding: 0 25px;
+    height: 70px;
+    box-shadow: 0 10px 30px -10px rgba(64, 64, 64, 0.7);
+  }
 
   height: ${(props) => props.scrollDirection === "up" && "70px"};
   transform: ${(props) =>

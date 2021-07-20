@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import emailjs from "emailjs-com";
 import { data } from "../../config";
@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <>
       {" "}
-      <Section id='projects'>
+      <Section id='contact'>
         <Heading>Contact</Heading>
         <Wrapper>
           <Description>
@@ -18,7 +18,9 @@ const Contact = () => {
           <Form
             onSubmit={(e) => {
               e.preventDefault();
-
+              let button = document.getElementById("submit");
+              button.innerText = "Email Sent";
+              button.setAttribute("disabled", "true");
               emailjs.sendForm(
                 data.serviceId,
                 data.templateId,
@@ -42,7 +44,10 @@ const Contact = () => {
               ></Input>
             </div>
             <TextBox name='message' placeholder='Your Message...' />
-            <Button type='submit'> Send</Button>
+            <Button id='submit' type='submit'>
+              {" "}
+              Send
+            </Button>
           </Form>
         </Wrapper>
       </Section>
@@ -53,7 +58,13 @@ const Contact = () => {
 export default Contact;
 const Section = styled.section`
   width: 100%;
-  padding: 100px 150px;
+  padding: 100px 150px 20px;
+  @media (max-width: 767px) {
+    padding: 50px 20px 20px;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    padding: 80px 40px 20px;
+  }
 `;
 const Input = styled.input`
   background-color: #3a3b3c;
@@ -76,6 +87,7 @@ const TextBox = styled.textarea`
   width: 100%;
   transition: all 0.2s ease-in;
   padding: 12px 10px;
+  resize: vertical;
   border: 2px solid #3a3b3c;
   background-color: #3a3b3c;
 
@@ -88,6 +100,7 @@ const TextBox = styled.textarea`
   }
 `;
 const Button = styled.button`
+  width: 130px;
   padding: 10px 12px 8px;
   margin: 0 auto;
   border: 2px solid #02d463;
@@ -95,7 +108,8 @@ const Button = styled.button`
   background-color: #02d463;
   color: #fff;
   align-self: center;
-  &:hover {
+  &:hover,
+  &:disabled {
     border: 2px solid #02d463;
     background-color: transparent;
     color: #02d463;
@@ -131,8 +145,8 @@ const Form = styled.form`
   }
 `;
 const Heading = styled.h3`
-  font-size: clamp(38px, 5vw, 50px);
-  line-height: clamp(38px, 5vw, 50px);
+  font-size: clamp(32px, 5vw, 50px);
+  line-height: clamp(32px, 5vw, 50px);
   margin-bottom: 20px;
   display: flex;
   align-items: center;
@@ -145,5 +159,9 @@ const Heading = styled.h3`
     width: 300px;
     height: 1px;
     background: linear-gradient(to right, #02d463, #fff);
+    @media (max-width: 767px) {
+      min-width: 120px;
+      max-width: 180px;
+    }
   }
 `;

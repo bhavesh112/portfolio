@@ -10,6 +10,7 @@ import "aos/dist/aos.css";
 import { data } from "./config";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 function App() {
   React.useEffect(() => {
     AOS.init({ duration: 1000, anchorPlacement: "top-bottom" });
@@ -23,6 +24,7 @@ function App() {
         {data.nav.experience && <Experience />}
         {data.nav.project && <Projects />}
         {data.nav.contact && <Contact />}
+        <Footer />
       </Container>
     </>
   );

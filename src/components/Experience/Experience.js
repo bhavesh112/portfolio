@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { data } from "../../config";
 import ExperienceCard from "./ExperienceCard";
 function elementInViewport(el) {
@@ -74,10 +74,14 @@ const ExperienceWrapper = styled.div`
   overflow: hidden;
   text-align: ${(props) => !props.even && "right"};
   align-self: ${(props) => props.even && "flex-end"};
+  @media (max-width: 767px) {
+    align-self: center;
+    text-align: left;
+  }
 `;
 const Heading = styled.h3`
-  font-size: clamp(38px, 5vw, 50px);
-  line-height: clamp(38px, 5vw, 50px);
+  font-size: clamp(32px, 5vw, 50px);
+  line-height: clamp(32px, 5vw, 50px);
   margin-bottom: 20px;
   display: flex;
   align-items: center;
@@ -90,6 +94,10 @@ const Heading = styled.h3`
     width: 300px;
     height: 1px;
     background: linear-gradient(to right, #02d463, #fff);
+    @media (max-width: 767px) {
+      min-width: 120px;
+      max-width: 180px;
+    }
   }
 `;
 
@@ -105,10 +113,19 @@ const AbsoluteWrapper = styled.div`
   position: absolute;
   left: 50%;
   width: 20px;
+  @media (max-width: 767px) {
+    display: none;
+  }
 `;
 const Section = styled.div`
   width: 100%;
   padding: 100px 150px;
+  @media (max-width: 767px) {
+    padding: 50px 20px;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    padding: 80px 40px;
+  }
 `;
 const Line = styled.div`
   width: ${(props) => (props.inView ? props.width + "px" : "0")};

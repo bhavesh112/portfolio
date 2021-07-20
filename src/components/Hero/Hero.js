@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { data } from "./../../config";
 const Hero = () => {
   return (
@@ -29,7 +29,7 @@ const Hero = () => {
 
 export default Hero;
 const ContactButton = styled.a`
-  width: fit-content;
+  width: 130px;
   &:link,
   &:visited {
     text-decoration: none;
@@ -52,6 +52,12 @@ const SectionWrapper = styled.section`
   flex-direction: column;
   justify-content: center;
   padding: 0 150px;
+  @media (max-width: 767px) {
+    padding: 0 20px;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    padding: 0 40px;
+  }
 `;
 
 const AboutMe = styled.p`
