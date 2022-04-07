@@ -143,7 +143,7 @@ const ImageWrapper = styled.div`
     width: 100%;
     height: auto;
   }
-  aspect-ratio: 16 / 9;
+  // aspect-ratio: 16 / 9;
   width: 50%;
   position: relative;
   grid-area: overlap;
